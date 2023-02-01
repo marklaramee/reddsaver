@@ -17,6 +17,14 @@
 		251B7A85297735C0009FAD5C /* reddsaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A84297735C0009FAD5C /* reddsaverTests.swift */; };
 		251B7A8F297735C0009FAD5C /* reddsaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A8E297735C0009FAD5C /* reddsaverUITests.swift */; };
 		251B7A91297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A90297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift */; };
+		2525903B29774CC600B4947D /* FirstTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525903A29774CC600B4947D /* FirstTimeViewController.swift */; };
+		2525904029774D7100B4947D /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525903F29774D7100B4947D /* UserStorage.swift */; };
+		25ED7747298B00C500B78F10 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED7746298B00C500B78F10 /* UIViewController+Additions.swift */; };
+		25ED774A298B019C00B78F10 /* OAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25ED7749298B019C00B78F10 /* OAuth.storyboard */; };
+		25ED774C298B028200B78F10 /* OAuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED774B298B028200B78F10 /* OAuthNavigationController.swift */; };
+		25ED7750298B034200B78F10 /* RootTabBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED774F298B034200B78F10 /* RootTabBarViewModel.swift */; };
+		25ED7752298B03D000B78F10 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED7751298B03D000B78F10 /* RootTabBarController.swift */; };
+		25ED7754298B04C000B78F10 /* Core.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25ED7753298B04C000B78F10 /* Core.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,14 @@
 		251B7A8A297735C0009FAD5C /* reddsaverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reddsaverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		251B7A8E297735C0009FAD5C /* reddsaverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reddsaverUITests.swift; sourceTree = "<group>"; };
 		251B7A90297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reddsaverUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2525903A29774CC600B4947D /* FirstTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeViewController.swift; sourceTree = "<group>"; };
+		2525903F29774D7100B4947D /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		25ED7746298B00C500B78F10 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		25ED7749298B019C00B78F10 /* OAuth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OAuth.storyboard; sourceTree = "<group>"; };
+		25ED774B298B028200B78F10 /* OAuthNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthNavigationController.swift; sourceTree = "<group>"; };
+		25ED774F298B034200B78F10 /* RootTabBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarViewModel.swift; sourceTree = "<group>"; };
+		25ED7751298B03D000B78F10 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
+		25ED7753298B04C000B78F10 /* Core.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Core.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +117,11 @@
 		251B7A69297735BD009FAD5C /* reddsaver */ = {
 			isa = PBXGroup;
 			children = (
-				251B7A6A297735BD009FAD5C /* AppDelegate.swift */,
-				251B7A6C297735BD009FAD5C /* SceneDelegate.swift */,
+				25ED7745298B009000B78F10 /* Extensions */,
+				251B7A9D29773C50009FAD5C /* Core */,
+				25ED7744298AFF1600B78F10 /* OAuth */,
+				2525903829774C7200B4947D /* Placeholder */,
+				2525903E29774D5100B4947D /* User */,
 				251B7A6E297735BD009FAD5C /* ViewController.swift */,
 				251B7A70297735BD009FAD5C /* Main.storyboard */,
 				251B7A76297735BF009FAD5C /* Assets.xcassets */,
@@ -128,6 +147,75 @@
 				251B7A90297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift */,
 			);
 			path = reddsaverUITests;
+			sourceTree = "<group>";
+		};
+		251B7A9D29773C50009FAD5C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				25ED774D298B031300B78F10 /* ViewModel */,
+				25ED774E298B032200B78F10 /* View */,
+				251B7A6A297735BD009FAD5C /* AppDelegate.swift */,
+				251B7A6C297735BD009FAD5C /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2525903829774C7200B4947D /* Placeholder */ = {
+			isa = PBXGroup;
+			children = (
+				2525903A29774CC600B4947D /* FirstTimeViewController.swift */,
+			);
+			path = Placeholder;
+			sourceTree = "<group>";
+		};
+		2525903E29774D5100B4947D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				2525903F29774D7100B4947D /* UserStorage.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		25ED7744298AFF1600B78F10 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				25ED7748298B018A00B78F10 /* View */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		25ED7745298B009000B78F10 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				25ED7746298B00C500B78F10 /* UIViewController+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		25ED7748298B018A00B78F10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25ED7749298B019C00B78F10 /* OAuth.storyboard */,
+				25ED774B298B028200B78F10 /* OAuthNavigationController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		25ED774D298B031300B78F10 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				25ED774F298B034200B78F10 /* RootTabBarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		25ED774E298B032200B78F10 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				25ED7751298B03D000B78F10 /* RootTabBarController.swift */,
+				25ED7753298B04C000B78F10 /* Core.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +324,8 @@
 			files = (
 				251B7A7A297735BF009FAD5C /* LaunchScreen.storyboard in Resources */,
 				251B7A77297735BF009FAD5C /* Assets.xcassets in Resources */,
+				25ED774A298B019C00B78F10 /* OAuth.storyboard in Resources */,
+				25ED7754298B04C000B78F10 /* Core.storyboard in Resources */,
 				251B7A72297735BD009FAD5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,9 +352,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				251B7A6F297735BD009FAD5C /* ViewController.swift in Sources */,
+				25ED7752298B03D000B78F10 /* RootTabBarController.swift in Sources */,
+				25ED7747298B00C500B78F10 /* UIViewController+Additions.swift in Sources */,
 				251B7A6B297735BD009FAD5C /* AppDelegate.swift in Sources */,
+				2525904029774D7100B4947D /* UserStorage.swift in Sources */,
+				2525903B29774CC600B4947D /* FirstTimeViewController.swift in Sources */,
 				251B7A75297735BD009FAD5C /* reddsaver.xcdatamodeld in Sources */,
+				25ED7750298B034200B78F10 /* RootTabBarViewModel.swift in Sources */,
 				251B7A6D297735BD009FAD5C /* SceneDelegate.swift in Sources */,
+				25ED774C298B028200B78F10 /* OAuthNavigationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,15 +535,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = reddsaver/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ReddSaver;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,9 +554,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marklaramee.reddsaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -468,13 +571,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = VH5PGQFXD9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = reddsaver/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ReddSaver;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,9 +588,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.marklaramee.reddsaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

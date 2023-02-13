@@ -60,16 +60,7 @@ class UserStorage {
     enum Key: String, CaseIterable {
         case deviceIdentifier
         case deviceTokenForNotifications   // base64encoded string
-        case dismissedBanners
-        case hideTryOnShareToolTip
-        case hideColorToolTip
-        case hidePullDownTryOnTip
-        case isFirstStart
-        case isTryOnUsed
-        case lastFlexibleVersion
-        case notificationSignUps
-        case ratingRequestDate
-        case dynamicYieldUserId
+        case OAuthToken
 
         func make(for userID: String) -> String {
             return self.rawValue + "_" + userID

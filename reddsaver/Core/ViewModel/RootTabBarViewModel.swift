@@ -10,7 +10,15 @@ import UIKit
 
 class RootTabBarViewModel {
 
-//    let storage = UserStorage.shared
+    // let storage = UserStorage.shared
+        
+        
+    var oAuthToken: String? {
+        let token: String? = UserStorage.shared.readGlobalValue(forKey: .OAuthToken)
+        return token
+    }
+    
+    
 //    let iOSVersion = UIDevice.current.systemVersion.components(separatedBy: ".")[0]
 //    var updateTriggered = false
 //

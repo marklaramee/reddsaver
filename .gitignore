@@ -6,6 +6,9 @@ xcuserdata/
 xcsettings
 .DS_Store
 
+## conf
+Config.xcconfig
+
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
 *.xccheckout
@@ -59,3 +62,4 @@ playground.xcworkspace
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace
+

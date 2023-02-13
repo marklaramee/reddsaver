@@ -31,6 +31,12 @@ class RootTabBarController: UITabBarController {
     // MARK: - Lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let token = viewModel.oAuthToken else {
+            launchOAuth()
+
+            return
+        }
 
 //        rootTabBar.tintColor = UIColor.Allbirds.black
 //
@@ -66,6 +72,63 @@ class RootTabBarController: UITabBarController {
 //            name: .updateTab,
 //            object: nil
 //        )
+    }
+    
+
+    private func launchOAuth() {
+        guard let apiKey = Bundle.main.infoDictionary?["API_KEY"] as? String else {
+            print("ml:  api key unavailable")
+            return
+        
+        }
+        
+        print("ml:  api \(apiKey)")
+        
+        let ACCESS_TOKEN_URL = "https://www.reddit.com/api/v1/access_token"
+            let GRANT_TYPE = "https://oauth.reddit.com/grants/installed_client"
+            let DONT_TRACK = "DO_NOT_TRACK_THIS_DEVICE"
+            let timeout = 15
+            let uncodedClientIDAndPassword = "\(apiKey):"  // TODO: remvoe force unwrap
+            let encodedClientIDAndPassword = uncodedClientIDAndPassword.toBase64()
+            let authStr = "Basic \(encodedClientIDAndPassword)"
+            guard let serviceUrl = URL(string: ACCESS_TOKEN_URL) else {
+                // completionHandler(nil)
+                let rrr = apiKey
+                return
+            }
+            var request = URLRequest(url: serviceUrl)
+            request.httpMethod = "POST"
+            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            request.addValue(authStr, forHTTPHeaderField: "Authorization")
+
+        // Important Edit: You need to manually make the parameters, don't make a String dictionary and convert it to JSON and then sending it. Reddit doesn't accept that.
+            let param = "grant_type=\(GRANT_TYPE)&device_id=\(DONT_TRACK)"
+            let data = param.data(using: .utf8)
+            request.httpBody = data
+            // timeout
+            let config = URLSessionConfiguration.default
+            config.timeoutIntervalForRequest = TimeInterval(timeout)
+            config.timeoutIntervalForResource = TimeInterval(timeout)
+            let session = URLSession(configuration: config)
+
+            session.dataTask(with: request) { (data, response, error) in
+                if data != nil {
+                    do {
+                        if let json = (try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)) as? [String: Any] {
+                            // self.accessToken = json["access_token"] as? String // TODO: stuff
+                            let accessToken = json["access_token"] as? String
+                            let rituri = 1
+                            print("ml: \(accessToken)")
+                        } else {
+                            // self.accessToken = nil
+                            let yyyy = 1
+                            
+                        }
+                    }
+                }
+                let oierut = 1;
+                // completionHandler(self.getAccessToken())
+            }.resume()
     }
 
 //    private func resetTabToViewReference() {

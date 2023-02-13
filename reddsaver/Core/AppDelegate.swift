@@ -12,6 +12,34 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        if let sourceApp = options[.sourceApplication] as? String {
+//            //work with the value
+//        }
+        
+//        if let event = options[.eventAttribution] as? String {
+//            //work with the value
+//        }
+        // old callback - move to notes
+        // http://marklaramee.com/reddsaver/redirect
+        
+        
+        
+        
+        // TODO: if ([url.scheme isEqualToString:@"myappscheme"]) {
+        
+        // set eredirect url to be reddsaver://oauth-callback
+        let nnn = url
+        if (url.host == "oauth-callback") {
+             print("ml: \(url.absoluteString)")
+            let fff = "a"
+//            if let event = options[.annotation] as? String {
+//                let www= event
+//            }
+//            OAuthSwift.handle(url: url)
+        }
+        return true
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

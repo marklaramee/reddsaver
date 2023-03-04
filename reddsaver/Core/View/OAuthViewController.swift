@@ -45,36 +45,41 @@ class OAuthViewController: UIViewController {
          try old.reddit.com for better error messages
          */
         
+        /*
+         TODO: https://developer.apple.com/forums/thread/712074
+         There's an open issue in XCode 16 with WKWebView that throws a threadsafe warning. No official resolution yet - 3/3/2023.
+         */
+        
         
         let oAuthUrl = "https://ssl.reddit.com/api/v1/authorize?client_id=\(clientId)&response_type=code&state=\(viewModel.validationString)&redirect_uri=\(viewModel.redirectPath)&duration=permanent&scope=history"
         guard let link = URL(string: oAuthUrl) else {
             handleError()
             return
         }
+        
         let request = URLRequest(url: link)
-        self.webView.load(request)
-        self.webView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(self.webView)
+        webView.load(request)
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(webView)
         
         let navigationBar = UINavigationBar(frame: .zero)
         navigationBar.translatesAutoresizingMaskIntoConstraints = false
         let navItem = UINavigationItem(title: "PERMISSIONS")
         navigationBar.setItems([navItem], animated: false)
         
-        self.view.addSubview(navigationBar)
+        view.addSubview(navigationBar)
         NSLayoutConstraint.activate([
-            navigationBar.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            navigationBar.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            navigationBar.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor)
+            navigationBar.leftAnchor.constraint(equalTo: view.leftAnchor),
+            navigationBar.rightAnchor.constraint(equalTo: view.rightAnchor),
+            navigationBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            self.webView.leftAnchor.constraint(equalTo: self.view.leftAnchor),
-            self.webView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            self.webView.rightAnchor.constraint(equalTo: self.view.rightAnchor),
-            self.webView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor)
+            webView.leftAnchor.constraint(equalTo: view.leftAnchor),
+            webView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            webView.rightAnchor.constraint(equalTo: view.rightAnchor),
+            webView.topAnchor.constraint(equalTo: navigationBar.bottomAnchor)
         ])
-            
     }
     
     // https://github.com/reddit-archive/reddit/wiki/OAuth2#retrieving-the-access-token

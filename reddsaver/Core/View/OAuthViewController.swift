@@ -1,5 +1,5 @@
 //
-//  View1ViewController.swift
+//  OAuthViewController.swift
 //  reddsaver
 //
 //  Created by Mark Laramee on 3/3/23.
@@ -18,7 +18,6 @@ class OAuthViewController: UIViewController {
         super.viewDidLoad()
         
         webView.navigationDelegate = self
-        // validationString = String.random()
 
         // TODO: move this conditional to root tab bar
         guard viewModel.oAuthToken != nil else {
@@ -43,13 +42,10 @@ class OAuthViewController: UIViewController {
         /*
          /api/v1/authorize.compact? for a page that's friendlier to small screens (some people are reporting issues)
          try old.reddit.com for better error messages
-         */
-        
-        /*
+
          TODO: https://developer.apple.com/forums/thread/712074
          There's an open issue in XCode 16 with WKWebView that throws a threadsafe warning. No official resolution yet - 3/3/2023.
          */
-        
         
         let oAuthUrl = "https://ssl.reddit.com/api/v1/authorize?client_id=\(clientId)&response_type=code&state=\(viewModel.validationString)&redirect_uri=\(viewModel.redirectPath)&duration=permanent&scope=history"
         guard let link = URL(string: oAuthUrl) else {
@@ -132,7 +128,6 @@ class OAuthViewController: UIViewController {
                 return
             }
             
-            // Check if there is any response data
             guard let responseData = data else {
                 self.handleError()
                 print("ML: Error: No response data")

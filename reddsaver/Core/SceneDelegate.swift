@@ -23,19 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.rootViewController = RootTabBarController.newInstance()
         window?.makeKeyAndVisible()
-
-        // Tint styling for the entire app
-//        UINavigationBar.appearance().tintColor = UIColor.Allbirds.black
-//        UITabBar.appearance().tintColor = UIColor.Allbirds.black
-
-        // Font styling for the navigation bar
-//        let attributes: [NSAttributedString.Key: Any] = [
-//            .foregroundColor: UIColor.Allbirds.black,
-//            .font: UIFont(allbirdsFontStyle: .bold, size: AccessibilityUtil.shared.maxFontSize(12)),
-//            .kern: LetterSpacing.allCaps.rawValue
-//        ]
-//        UINavigationBar.appearance().titleTextAttributes = attributes
-
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

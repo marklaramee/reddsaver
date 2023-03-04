@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		251B7A6B297735BD009FAD5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A6A297735BD009FAD5C /* AppDelegate.swift */; };
 		251B7A6D297735BD009FAD5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A6C297735BD009FAD5C /* SceneDelegate.swift */; };
-		251B7A6F297735BD009FAD5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A6E297735BD009FAD5C /* ViewController.swift */; };
 		251B7A72297735BD009FAD5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251B7A70297735BD009FAD5C /* Main.storyboard */; };
 		251B7A75297735BD009FAD5C /* reddsaver.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A73297735BD009FAD5C /* reddsaver.xcdatamodeld */; };
 		251B7A77297735BF009FAD5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 251B7A76297735BF009FAD5C /* Assets.xcassets */; };
@@ -17,7 +16,6 @@
 		251B7A85297735C0009FAD5C /* reddsaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A84297735C0009FAD5C /* reddsaverTests.swift */; };
 		251B7A8F297735C0009FAD5C /* reddsaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A8E297735C0009FAD5C /* reddsaverUITests.swift */; };
 		251B7A91297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A90297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift */; };
-		2525903B29774CC600B4947D /* FirstTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525903A29774CC600B4947D /* FirstTimeViewController.swift */; };
 		2525904029774D7100B4947D /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525903F29774D7100B4947D /* UserStorage.swift */; };
 		25773B7A299A3E5E0005BD2A /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25773B79299A3E5E0005BD2A /* String+Additions.swift */; };
 		2588E9A629B279C1007620CC /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2588E9A529B279C1007620CC /* OAuthViewController.swift */; };
@@ -51,7 +49,6 @@
 		251B7A67297735BD009FAD5C /* reddsaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reddsaver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		251B7A6A297735BD009FAD5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		251B7A6C297735BD009FAD5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		251B7A6E297735BD009FAD5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		251B7A71297735BD009FAD5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		251B7A74297735BD009FAD5C /* reddsaver.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = reddsaver.xcdatamodel; sourceTree = "<group>"; };
 		251B7A76297735BF009FAD5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,7 +59,6 @@
 		251B7A8A297735C0009FAD5C /* reddsaverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reddsaverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		251B7A8E297735C0009FAD5C /* reddsaverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reddsaverUITests.swift; sourceTree = "<group>"; };
 		251B7A90297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reddsaverUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2525903A29774CC600B4947D /* FirstTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeViewController.swift; sourceTree = "<group>"; };
 		2525903F29774D7100B4947D /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
 		25773B78299A3C650005BD2A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		25773B79299A3E5E0005BD2A /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
@@ -126,9 +122,7 @@
 			children = (
 				25ED7745298B009000B78F10 /* Extensions */,
 				251B7A9D29773C50009FAD5C /* Core */,
-				2525903829774C7200B4947D /* Placeholder */,
 				2525903E29774D5100B4947D /* User */,
-				251B7A6E297735BD009FAD5C /* ViewController.swift */,
 				251B7A70297735BD009FAD5C /* Main.storyboard */,
 				251B7A76297735BF009FAD5C /* Assets.xcassets */,
 				251B7A78297735BF009FAD5C /* LaunchScreen.storyboard */,
@@ -166,14 +160,6 @@
 				251B7A6C297735BD009FAD5C /* SceneDelegate.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		2525903829774C7200B4947D /* Placeholder */ = {
-			isa = PBXGroup;
-			children = (
-				2525903A29774CC600B4947D /* FirstTimeViewController.swift */,
-			);
-			path = Placeholder;
 			sourceTree = "<group>";
 		};
 		2525903E29774D5100B4947D /* User */ = {
@@ -353,12 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				251B7A6F297735BD009FAD5C /* ViewController.swift in Sources */,
 				25ED7752298B03D000B78F10 /* RootTabBarController.swift in Sources */,
 				25ED7747298B00C500B78F10 /* UIViewController+Additions.swift in Sources */,
 				251B7A6B297735BD009FAD5C /* AppDelegate.swift in Sources */,
 				2525904029774D7100B4947D /* UserStorage.swift in Sources */,
-				2525903B29774CC600B4947D /* FirstTimeViewController.swift in Sources */,
 				251B7A75297735BD009FAD5C /* reddsaver.xcdatamodeld in Sources */,
 				2588E9A629B279C1007620CC /* OAuthViewController.swift in Sources */,
 				25ED7750298B034200B78F10 /* OAuthViewModel.swift in Sources */,

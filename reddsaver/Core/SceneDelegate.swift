@@ -23,6 +23,37 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window?.rootViewController = RootTabBarController.newInstance()
         window?.makeKeyAndVisible()
+        
+        /*
+         guard let winScene = (scene as? UIWindowScene) else { return }
+
+         // Create main app window with initial view controller
+         window = UIWindow(windowScene: winScene)
+
+         if OnboardingController.shared.isOnboardingComplete {
+             window?.rootViewController = RootTabBarController.newInstance()
+             window?.makeKeyAndVisible()
+         } else {
+             window?.rootViewController = getLaunchScreen()
+             window?.makeKeyAndVisible()
+
+             // wait for remote configs so we know which screen to load
+             DispatchQueue.main.async {
+                 let semaphore = DispatchSemaphore(value: 0)
+
+                 Configuration.shared.waitForRemoteConfigurations { _ in
+                     self.launchOnboarding()
+                     semaphore.signal()
+                 }
+
+                 let timeout = DispatchTime.now() + .seconds(self.remoteConfigurationTimeoutInSeconds)
+                 if semaphore.wait(timeout: timeout) == .timedOut {
+                     self.launchOnboarding()
+                     semaphore.signal()
+                 }
+             }
+         }
+         */
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

@@ -13,6 +13,19 @@ class OAuthViewController: UIViewController {
     private var webView = WKWebView(frame: .zero)
     
     let viewModel = OAuthViewModel()
+    
+    static func newInstance() -> OAuthViewController {
+        let viewController = buildFromStoryboard("OAuth") as OAuthViewController
+        return viewController
+    }
+
+    private init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -136,9 +149,11 @@ class OAuthViewController: UIViewController {
             
             do {
                 let redditResponse = try JSONDecoder().decode(RedditResponse.self, from: responseData)
-                // TODO: send to storage and navigate
-                print("ML: acccess_token \(redditResponse.access_token)")
-                print("ML: refresh_token \(redditResponse.refresh_token)")
+                // TODO: validate?
+                self.viewModel.saveTokens(response: redditResponse)
+                DispatchQueue.main.async {
+                    self.navigationController?.popToRootViewController(animated: true)
+                }
             } catch {
                 self.handleError()
                 print("ML: Error: \(error)")

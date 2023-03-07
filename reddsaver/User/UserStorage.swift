@@ -59,8 +59,8 @@ class UserStorage {
 
     enum Key: String, CaseIterable {
         case deviceIdentifier
-        case deviceTokenForNotifications   // base64encoded string
-        case OAuthToken
+        case accessToken
+        case refreshToken
 
         func make(for userID: String) -> String {
             return self.rawValue + "_" + userID

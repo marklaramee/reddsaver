@@ -6,6 +6,7 @@ target 'reddsaver' do
   # Networking
   pod 'Alamofire', '5.4.4'
   # pod 'AlamofireImage', '4.1.0'
+  pod 'SwiftyJSON', '~> 4.0'
 
   # RxSwift
   pod 'RxSwift', '6.2.0'

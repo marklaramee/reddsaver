@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class RedditClient {
     static let shared = RedditClient()
@@ -35,16 +36,36 @@ class RedditClient {
         let tokenHeaders: HTTPHeaders = [.authorization(bearerToken: token)]
         
         AF.request(urlPath, headers: tokenHeaders).responseJSON { response in
-            if response.data != nil {
-                let stringValue = String(decoding: response.data!, as: UTF8.self)
+            guard let datums = response.data else {
+                // TODO:
+                return
+            }
+                let stringValue = String(decoding: datums, as: UTF8.self)
                 debugPrint(stringValue)
                 let nnn = stringValue
+            
+            
+            let JSONObject = try? JSON(data: datums)
+            var ppp = 1
+            print(JSONObject!)
+            ppp = 2
+            
+//            if let JSONObject = try? JSONSerialization.jsonObject(with: datums, options: .allowFragments) as? [[String: Any]] {
+//                var ppp = 1
+//                print(JSONObject)
+//                ppp = 2
+//
+//                    // There's our username
+//            }
+            
+            
+            
 //              let json = JSON(data: response.data!)
 //              let name = json["people"][0]["name"].string
 //              if name != nil {
 //                print(name!)
 //              }
-            }
+           // }
         }
             
             

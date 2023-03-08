@@ -30,23 +30,11 @@ class View1ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        // TODO: move to scene delegate
-        // oAuthCheck()
-        
+ 
         // TODO: reinstate
         // RedditClient.shared.getPagedItems()
             
     }
-
-//    func oAuthCheck() {
-//        guard let nextVC = AuthenticationManager.shared.getNextViewController(controller: self) else {
-//            return
-//        }
-//        navigationController?.pushViewController(nextVC, animated: true)
-////        oauthVc.modalPresentationStyle = .fullScreen
-////        present(oauthVc, animated: true, completion: nil)
-//    }
 
 }
 

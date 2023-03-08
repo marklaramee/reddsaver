@@ -17,6 +17,9 @@
 		251B7A8F297735C0009FAD5C /* reddsaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A8E297735C0009FAD5C /* reddsaverUITests.swift */; };
 		251B7A91297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A90297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift */; };
 		2525904029774D7100B4947D /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525903F29774D7100B4947D /* UserStorage.swift */; };
+		253E538629B857B300C15D4A /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E538529B857B300C15D4A /* TokenManager.swift */; };
+		253E538929B8687700C15D4A /* ReddLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E538829B8687700C15D4A /* ReddLogger.swift */; };
+		25451C0D29B7A3CF004FA121 /* RedditClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25451C0C29B7A3CF004FA121 /* RedditClient.swift */; };
 		25773B7A299A3E5E0005BD2A /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25773B79299A3E5E0005BD2A /* String+Additions.swift */; };
 		257DFF9129B6B2F700093387 /* OAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257DFF9029B6B2F700093387 /* OAuth.storyboard */; };
 		257DFF9429B6B85D00093387 /* View1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DFF9329B6B85D00093387 /* View1ViewController.swift */; };
@@ -63,6 +66,9 @@
 		251B7A8E297735C0009FAD5C /* reddsaverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reddsaverUITests.swift; sourceTree = "<group>"; };
 		251B7A90297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reddsaverUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2525903F29774D7100B4947D /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		253E538529B857B300C15D4A /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		253E538829B8687700C15D4A /* ReddLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReddLogger.swift; sourceTree = "<group>"; };
+		25451C0C29B7A3CF004FA121 /* RedditClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditClient.swift; sourceTree = "<group>"; };
 		25773B78299A3C650005BD2A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		25773B79299A3E5E0005BD2A /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		257DFF9029B6B2F700093387 /* OAuth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OAuth.storyboard; sourceTree = "<group>"; };
@@ -126,6 +132,8 @@
 		251B7A69297735BD009FAD5C /* reddsaver */ = {
 			isa = PBXGroup;
 			children = (
+				253E538729B8685600C15D4A /* Utilities */,
+				25451C0929B7A39C004FA121 /* Client */,
 				257DFF9229B6B84300093387 /* Temp */,
 				251B7A9D29773C50009FAD5C /* Core */,
 				25ED7745298B009000B78F10 /* Extensions */,
@@ -171,9 +179,25 @@
 		2525903E29774D5100B4947D /* User */ = {
 			isa = PBXGroup;
 			children = (
-				2525903F29774D7100B4947D /* UserStorage.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		253E538729B8685600C15D4A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2525903F29774D7100B4947D /* UserStorage.swift */,
+				253E538829B8687700C15D4A /* ReddLogger.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		25451C0929B7A39C004FA121 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				25451C0C29B7A3CF004FA121 /* RedditClient.swift */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 		257DFF8E29B6B23A00093387 /* OAuth */ = {
@@ -182,6 +206,7 @@
 				2588E9AB29B2A69E007620CC /* Model */,
 				257DFF8F29B6B26000093387 /* View */,
 				25ED774D298B031300B78F10 /* ViewModel */,
+				253E538529B857B300C15D4A /* TokenManager.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -375,12 +400,15 @@
 			files = (
 				25ED7752298B03D000B78F10 /* RootTabBarController.swift in Sources */,
 				257DFF9429B6B85D00093387 /* View1ViewController.swift in Sources */,
+				25451C0D29B7A3CF004FA121 /* RedditClient.swift in Sources */,
 				25ED7747298B00C500B78F10 /* UIViewController+Additions.swift in Sources */,
 				251B7A6B297735BD009FAD5C /* AppDelegate.swift in Sources */,
 				2525904029774D7100B4947D /* UserStorage.swift in Sources */,
 				251B7A75297735BD009FAD5C /* reddsaver.xcdatamodeld in Sources */,
 				2588E9A629B279C1007620CC /* OAuthViewController.swift in Sources */,
+				253E538929B8687700C15D4A /* ReddLogger.swift in Sources */,
 				257DFF9629B6C05D00093387 /* Nav1Controller.swift in Sources */,
+				253E538629B857B300C15D4A /* TokenManager.swift in Sources */,
 				25ED7750298B034200B78F10 /* OAuthViewModel.swift in Sources */,
 				2588E9AD29B2A6AE007620CC /* OAuthModel.swift in Sources */,
 				2588E9AA29B28E32007620CC /* Collection+Additions.swift in Sources */,
@@ -493,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -548,7 +576,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

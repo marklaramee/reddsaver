@@ -53,10 +53,9 @@ class RedditClient {
                 do {
                     let items = try response.result.get()
                     debugPrint(items)
-                    let nnn = 1
                 } catch {
                     // TODO: log it
-                    print("ml: fail")
+                    print("ml: Failed to decode RedditResponse.Root")
                 }
             case .failure(let error):
                 // TODO:

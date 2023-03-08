@@ -60,4 +60,29 @@ struct RedditResponse: Codable {
         var width: Int?
     }
     
+    enum Types: String {
+        case t1 = "Comment"
+        case t2 = "Account"
+        case t3 = "Link"
+        case t4 = "Message"
+        case t5 = "Subreddit"
+        case t6 = "Award"
+    }
 }
+
+
+
+/*
+ struct Stack<Element> {
+ var items: [Element] = []
+ mutating func push(_ item: Element) {
+ items.append(item)
+ }
+ 
+ mutating func pop() -> Element {
+ return items.removeLast()
+ }
+ }
+ 
+ var stackSt = Stack<String>()
+ */

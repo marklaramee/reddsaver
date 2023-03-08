@@ -20,14 +20,18 @@ struct RedditResponse: Codable {
     }
     
     struct Item: Codable {
-        var kind: String?  // TODO: convert to enum https://www.reddit.com/dev/api#listings
-        var data: ItemData?
+        var kind: String  // TODO: convert to enum https://www.reddit.com/dev/api#listings
+        var data: ItemData
     }
     
     struct ItemData: Codable {
-        var id: String?
+        var id: String
         var author: String?
-        var permalink: String?
+        var body: String?
+        var link_id: String?
+        var link_permalink: String?
+        var name: String?
+        var permalink: String
         var preview: Preview?
         var subreddit: String?
         var subreddit_name_prefixed: String?

@@ -64,27 +64,24 @@ class RedditClient {
             }
         }
         
-        
-        
-            
-        
-        
-//        AF.request(urlPath, headers: tokenHeaders).responseJSON { response in
-//            guard let datums = response.data else {
-//                // TODO:
-//                return
-//            }
-//                let stringValue = String(decoding: datums, as: UTF8.self)
-//                debugPrint(stringValue)
-//                let nnn = stringValue
-//
-//
-//            let JSONObject = try? JSON(data: datums)
-//            var ppp = 1
-//            print(JSONObject!)
-//            ppp = 2
-//
-//        }
+        // debug code
+        /*
+        AF.request(urlPath, headers: tokenHeaders).responseJSON { response in
+            guard let datums = response.data else {
+                // TODO:
+                return
+            }
+                let stringValue = String(decoding: datums, as: UTF8.self)
+                debugPrint(stringValue)
+                let nnn = stringValue
+
+
+            let JSONObject = try? JSON(data: datums)
+            var ppp = 1
+            print(JSONObject!)
+
+        }
+         */
     }
 }
 

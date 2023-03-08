@@ -121,7 +121,7 @@ extension OAuthViewController: WKNavigationDelegate {
             viewModel.getAccessToken(code) { status in
                 switch (status) {
                 case true:
-                    self.navigationController?.popToRootViewController(animated: true)
+                    AuthenticationManager.shared.navigateToNextViewController(self.navigationController)
                 case false:
                     self.handleError()
                 }

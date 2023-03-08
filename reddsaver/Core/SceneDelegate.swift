@@ -21,14 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create main app window with initial view controller
         window = UIWindow(windowScene: winScene)
         
-        if AuthenticationManager.shared.isAuthenticationComplete {
-            window?.rootViewController = RootTabBarController.newInstance()
-            window?.makeKeyAndVisible()
-        } else {
-            // TODO: replace with launch screen
-            window?.rootViewController = RootTabBarController.newInstance()
-            window?.makeKeyAndVisible()
-            
+        window?.rootViewController = RootTabBarController.newInstance()
+        window?.makeKeyAndVisible()
+        
+        if !AuthenticationManager.shared.isAuthenticationComplete {
             launchOAuthFlow()
         }
     }

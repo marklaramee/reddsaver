@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     // TODO: make private?
-    func launchOAuthFlow() {
+    private func launchOAuthFlow() {
         let startVc = AuthenticationManager.shared.nextViewController()
         guard let nextVC = startVc else {
             // TODO: refactor this redundancy

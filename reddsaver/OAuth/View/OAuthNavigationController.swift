@@ -8,7 +8,6 @@
 import UIKit
 
 class OAuthNavigationController: UINavigationController {
-    
     // MARK: - Init
     static func newInstance() -> OAuthNavigationController {
         let viewController = buildFromStoryboard("OAuth") as OAuthNavigationController
@@ -20,11 +19,4 @@ class OAuthNavigationController: UINavigationController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // self.viewControllers = [AuthenticationManager.shared.getNextViewController()]
-//    }
-
 }

@@ -21,9 +21,7 @@ class OAuthViewModel {
     }
     
     // https://github.com/reddit-archive/reddit/wiki/OAuth2#retrieving-the-access-token
-    /*
-     return completion success or failure
-     */
+    // TODO: return completion success or failure when implementing refesh token
     func getAccessToken(_ code: String, completion: @escaping (Bool) -> Void) {
         // https://stackoverflow.com/a/75383148/641854 trim code string
         let cleanCode = code.trimmingCharacters(in: CharacterSet(charactersIn: "#_"))

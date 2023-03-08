@@ -18,9 +18,9 @@ class AuthenticationManager {
     
     init() {
         // TODO: for debugging 
-        UserStorage.shared.deleteGlobalValue(forKey: .accessToken)
-        UserStorage.shared.deleteGlobalValue(forKey: .refreshToken)
-        UserStorage.shared.deleteGlobalValue(forKey: .username)
+//        UserStorage.shared.deleteGlobalValue(forKey: .accessToken)
+//        UserStorage.shared.deleteGlobalValue(forKey: .refreshToken)
+//        UserStorage.shared.deleteGlobalValue(forKey: .username)
     }
     
     var username: String? {
@@ -76,17 +76,13 @@ class AuthenticationManager {
     
     func navigateToNextViewController(_ navController: UINavigationController?) {
         guard let nextVC = nextViewController() else {
-            // navController?.popToRootViewController(animated: true)
-            // SceneDelegate.shared?.window?.rootViewController = RootTabBarController.newInstance()
-            
+            // OAuth flow completed, go to home screen
             guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                 let sceneDelegate = windowScene.delegate as? SceneDelegate
               else {
                 return
               }
             sceneDelegate.window?.rootViewController = RootTabBarController.newInstance()
-            
-            let nnn = 1
             return
         }
         navController?.pushViewController(nextVC, animated: true)

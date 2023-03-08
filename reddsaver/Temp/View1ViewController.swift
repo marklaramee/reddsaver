@@ -32,7 +32,7 @@ class View1ViewController: UIViewController {
         super.viewDidLayoutSubviews()
  
         // TODO: reinstate
-        // RedditClient.shared.getPagedItems()
+        RedditClient.shared.getPagedItems()
             
     }
 

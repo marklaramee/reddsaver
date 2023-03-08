@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class RedditClient {
     static let shared = RedditClient()
@@ -31,6 +32,47 @@ class RedditClient {
     
     private func getSavedItemsAF(token: String, username: String) {
         let urlPath = "http://oauth.reddit.com/user/\(username)/saved.json"
+        let tokenHeaders: HTTPHeaders = [.authorization(bearerToken: token)]
+        
+        AF.request(urlPath, headers: tokenHeaders).responseJSON { response in
+            if response.data != nil {
+                let stringValue = String(decoding: response.data!, as: UTF8.self)
+                debugPrint(stringValue)
+                let nnn = stringValue
+//              let json = JSON(data: response.data!)
+//              let name = json["people"][0]["name"].string
+//              if name != nil {
+//                print(name!)
+//              }
+            }
+        }
+            
+            
+            
+//            .response { response in
+//
+//
+//            switch response.result {
+//            case .success:
+//                if let data = response.data {
+//                    do {
+//                        debugPrint(data)
+//                        let nnn = data
+////                        let bets = try JSONDecoder().decode(Bets.self, from: data)
+////                        print("message: \(bets.message)")
+////
+////                        self.setupTableData()
+////                        completion?(true)
+//                    } catch {
+////                        print("Error: \(error)")
+////                        completion?(false)
+//                    }
+//                }
+//            case.failure(let error):
+//                print(error)
+//                // completion?(false)
+//            }
+        // }
     }
     
     //

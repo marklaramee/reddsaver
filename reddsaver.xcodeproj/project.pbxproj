@@ -20,6 +20,7 @@
 		253E538629B857B300C15D4A /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E538529B857B300C15D4A /* AuthenticationManager.swift */; };
 		253E538929B8687700C15D4A /* ReddLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E538829B8687700C15D4A /* ReddLogger.swift */; };
 		25451C0D29B7A3CF004FA121 /* RedditClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25451C0C29B7A3CF004FA121 /* RedditClient.swift */; };
+		256E602F29B8FE560098200E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256E602E29B8FE560098200E /* LogInViewController.swift */; };
 		25773B7A299A3E5E0005BD2A /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25773B79299A3E5E0005BD2A /* String+Additions.swift */; };
 		257DFF9129B6B2F700093387 /* OAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257DFF9029B6B2F700093387 /* OAuth.storyboard */; };
 		257DFF9429B6B85D00093387 /* View1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DFF9329B6B85D00093387 /* View1ViewController.swift */; };
@@ -70,6 +71,7 @@
 		253E538529B857B300C15D4A /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		253E538829B8687700C15D4A /* ReddLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReddLogger.swift; sourceTree = "<group>"; };
 		25451C0C29B7A3CF004FA121 /* RedditClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditClient.swift; sourceTree = "<group>"; };
+		256E602E29B8FE560098200E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		25773B78299A3C650005BD2A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		25773B79299A3E5E0005BD2A /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		257DFF9029B6B2F700093387 /* OAuth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OAuth.storyboard; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 			children = (
 				2588E9A529B279C1007620CC /* OAuthViewController.swift */,
 				257DFF9029B6B2F700093387 /* OAuth.storyboard */,
+				256E602E29B8FE560098200E /* LogInViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -460,6 +463,7 @@
 			files = (
 				25ED7752298B03D000B78F10 /* RootTabBarController.swift in Sources */,
 				257DFF9429B6B85D00093387 /* View1ViewController.swift in Sources */,
+				256E602F29B8FE560098200E /* LogInViewController.swift in Sources */,
 				25451C0D29B7A3CF004FA121 /* RedditClient.swift in Sources */,
 				25ED7747298B00C500B78F10 /* UIViewController+Additions.swift in Sources */,
 				251B7A6B297735BD009FAD5C /* AppDelegate.swift in Sources */,

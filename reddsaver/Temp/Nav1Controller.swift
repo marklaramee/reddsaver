@@ -12,7 +12,7 @@ class Nav1Controller: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.viewControllers = [View1ViewController.newInstance()]
+        // self.viewControllers = [AuthenticationManager.shared.getNextViewController()]
     }
 
 }

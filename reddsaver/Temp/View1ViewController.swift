@@ -31,7 +31,7 @@ class View1ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        guard oAuthViewModel.oAuthToken != nil else {
+        guard TokenManager.shared.accessToken != nil else {
             loadOAuth()
             return
         }

@@ -1,0 +1,13 @@
+platform :ios, '13.0'
+
+use_frameworks!
+
+target 'reddsaver' do
+  # Networking
+  pod 'Alamofire', '5.4.4'
+  # pod 'AlamofireImage', '4.1.0'
+
+  # RxSwift
+  pod 'RxSwift', '6.2.0'
+  # pod 'RxCocoa', '6.2.0'
+end

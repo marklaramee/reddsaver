@@ -31,10 +31,13 @@ class View1ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        guard TokenManager.shared.accessToken != nil else {
+        guard AuthenticationManager.shared.accessToken != nil else {
             loadOAuth()
             return
         }
+        
+        RedditClient.shared.getPagedItems()
+            
     }
 
     func loadOAuth() {

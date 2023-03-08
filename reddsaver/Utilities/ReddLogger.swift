@@ -15,7 +15,9 @@ enum LogLevel: String {
 }
 
 enum LogCategory: String {
-    case oAuth
+    case oAuth = "OAuth Flow"
+    case redditClient = "Reddit Client"
+    case token
 }
 
 class ReddLogger {

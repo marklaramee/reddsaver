@@ -33,7 +33,7 @@ class OAuthViewController: UIViewController {
         webView.navigationDelegate = self
 
         // TODO: move this conditional to root tab bar
-        guard TokenManager.shared.accessToken != nil else {
+        guard AuthenticationManager.shared.accessToken != nil else {
             getAuthCode()
             return
         }

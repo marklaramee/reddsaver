@@ -62,6 +62,7 @@ class UserStorage {
         case accessToken
         case refreshToken
         case tokenExpiration
+        case username
 
         func make(for userID: String) -> String {
             return self.rawValue + "_" + userID

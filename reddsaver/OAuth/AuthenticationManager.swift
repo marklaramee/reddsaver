@@ -7,9 +7,9 @@
 
 import Foundation
 
-class TokenManager {
+class AuthenticationManager {
     
-    static let shared = TokenManager()
+    static let shared = AuthenticationManager()
     
     init() {
         // TODO: for debugging 
@@ -17,18 +17,20 @@ class TokenManager {
         UserStorage.shared.deleteGlobalValue(forKey: .refreshToken)
     }
     
+    var username: String? {
+        let name: String? = UserStorage.shared.readGlobalValue(forKey: .username)
+        return name
+    }
+    
     var accessToken: String? {
         let token: String? = UserStorage.shared.readGlobalValue(forKey: .accessToken)
         return token
     }
     
-    func getCurrentAccessToken(completion: @escaping (String) -> Void, onFailure: () -> Void) {
-        let nillableToken: String? = UserStorage.shared.readGlobalValue(forKey: .accessToken)
-        guard let validToken = nillableToken else {
-            onFailure()
-            return
-        }
-        completion(validToken)
+    // TODO: build in failure/success
+    func getCurrentAccessToken(completion: (String?) -> Void) {
+        let token: String? = UserStorage.shared.readGlobalValue(forKey: .accessToken)
+        completion(token)
         return
     }
     

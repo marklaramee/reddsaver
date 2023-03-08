@@ -16,7 +16,7 @@ import SwiftyJSON
 //     http://www.reddit.com/*.json
 //
 //     Some endpoints are oauth only, and oauth works with the same
-//     http://oauth.reddit.com/-.json
+//     http://oauth.reddit.com/*.json
 //
 //     In 4 days non oauth requests will be rate limited more harshly
 //     https://www.reddit.com/r/redditdev/comments/4a1bts/what_is_the_domain_for_the_api_requests/
@@ -39,7 +39,6 @@ class RedditClient {
                 return
             }
             getSavedItems(token: validToken, username: user)
-
         }
     }
     

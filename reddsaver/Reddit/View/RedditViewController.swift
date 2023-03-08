@@ -11,8 +11,12 @@ class RedditViewController: UIViewController {
     
     let oAuthViewModel = OAuthViewModel()
     
+    @IBOutlet weak var savedItemsTableView: UITableView!
+    
+    
+    
     static func newInstance() -> RedditViewController {
-        let viewController = buildFromStoryboard("Core") as RedditViewController
+        let viewController = buildFromStoryboard("Reddit") as RedditViewController
         return viewController
     }
 
@@ -36,4 +40,24 @@ class RedditViewController: UIViewController {
             
     }
 
+}
+
+// MARK: UITableViewDataSource
+extension RedditViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as? PostTableViewCell else {
+            // TODO: logger
+            return UITableViewCell()
+        }
+        
+        return cell
+    }
 }

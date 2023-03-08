@@ -58,15 +58,12 @@
         <!--Item-->
         <scene sceneID="ggH-cd-68P">
             <objects>
-                <navigationController id="tfa-lf-j9O" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RedditNavigationController" id="tfa-lf-j9O" customClass="RedditNavigationController" customModule="reddsaver" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ryg-T3-sIQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ucc-HK-VDc">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="NVZ-6e-yxU" kind="relationship" relationship="rootViewController" id="m34-6E-55r"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0F-xB-gE1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -89,36 +86,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nuf-Du-Eh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-364" y="39"/>
-        </scene>
-        <!--Item 2-->
-        <scene sceneID="M0f-I2-i8U">
-            <objects>
-                <viewController storyboardIdentifier="RedditViewController" id="NVZ-6e-yxU" customClass="RedditViewController" customModule="reddsaver" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ovy-cx-VOG">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="View 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gC-cG-kZK">
-                                <rect key="frame" x="158" y="315" width="49" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="iHJ-2T-6ik"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="8gC-cG-kZK" firstAttribute="centerX" secondItem="iHJ-2T-6ik" secondAttribute="centerX" id="K0B-5K-aqr"/>
-                            <constraint firstItem="8gC-cG-kZK" firstAttribute="centerX" secondItem="iHJ-2T-6ik" secondAttribute="centerX" id="VfJ-yn-ani"/>
-                            <constraint firstItem="8gC-cG-kZK" firstAttribute="centerY" secondItem="iHJ-2T-6ik" secondAttribute="centerY" id="hQ6-jF-LFW"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="1uj-vb-YUo"/>
-                    <navigationItem key="navigationItem" id="daD-Iv-N9d"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g7h-fo-DEb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1285" y="-356"/>
         </scene>
     </scenes>
     <resources>

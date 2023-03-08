@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol AuthenticationDelegate {
+    func loadNextViewController(_ nextVC: UIViewController?)
+}
+
 class AuthenticationManager {
     
     static let shared = AuthenticationManager()
@@ -26,6 +30,10 @@ class AuthenticationManager {
     var accessToken: String? {
         let token: String? = UserStorage.shared.readGlobalValue(forKey: .accessToken)
         return token
+    }
+    
+    var isAuthenticationComplete: Bool {
+        return username != nil && accessToken != nil
     }
     
     // TODO: build in failure/success
@@ -55,7 +63,7 @@ class AuthenticationManager {
         completion(true)
     }
     
-    func getNextViewController() -> UIViewController
+    func nextViewController() -> UIViewController?
     {
         guard username != nil else {
             return LogInViewController.newInstance()
@@ -63,7 +71,6 @@ class AuthenticationManager {
         guard accessToken != nil else {
             return OAuthViewController.newInstance()
         }
-        // TODO: possibly return nil and let other class handle this as it's a violation of SRP
-        return View1ViewController.newInstance()
+        return nil
     }
 }

@@ -31,20 +31,31 @@ class View1ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        guard AuthenticationManager.shared.accessToken != nil else {
-            loadOAuth()
-            return
-        }
+        // TODO: move to scene delegate
+        // oAuthCheck()
         
-        RedditClient.shared.getPagedItems()
+        // TODO: reinstate
+        // RedditClient.shared.getPagedItems()
             
     }
 
-    func loadOAuth() {
-        let oauthVc = OAuthViewController.newInstance()
-        navigationController?.pushViewController(oauthVc, animated: true)
-//        oauthVc.modalPresentationStyle = .fullScreen
-//        present(oauthVc, animated: true, completion: nil)
-    }
+//    func oAuthCheck() {
+//        guard let nextVC = AuthenticationManager.shared.getNextViewController(controller: self) else {
+//            return
+//        }
+//        navigationController?.pushViewController(nextVC, animated: true)
+////        oauthVc.modalPresentationStyle = .fullScreen
+////        present(oauthVc, animated: true, completion: nil)
+//    }
 
+}
+
+// MARK: AuthenticationDelegate
+extension View1ViewController: AuthenticationDelegate {
+    func loadNextViewController(_ nextVC: UIViewController?) {
+        guard let loadingVC = nextVC else {
+            return
+        }
+        navigationController?.pushViewController(loadingVC, animated: true)
+    }
 }

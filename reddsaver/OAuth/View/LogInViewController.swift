@@ -12,8 +12,8 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var usernameButton: UIButton!
     
-    static func newInstance() -> View1ViewController {
-        let viewController = buildFromStoryboard("Core") as View1ViewController
+    static func newInstance() -> LogInViewController {
+        let viewController = buildFromStoryboard("OAuth") as LogInViewController
         return viewController
     }
 

@@ -21,8 +21,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Create main app window with initial view controller
         window = UIWindow(windowScene: winScene)
         
-        window?.rootViewController = RootTabBarController.newInstance()
-        window?.makeKeyAndVisible()
+        if AuthenticationManager.shared.isAuthenticationComplete {
+            window?.rootViewController = RootTabBarController.newInstance()
+            window?.makeKeyAndVisible()
+        } else {
+            // TODO: replace with launch screen
+            window?.rootViewController = RootTabBarController.newInstance()
+            window?.makeKeyAndVisible()
+            
+            launchOAuthFlow()
+        }
+        
+        
         
         /*
          guard let winScene = (scene as? UIWindowScene) else { return }
@@ -55,6 +65,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
          }
          */
     }
+    
+    // TODO: make private?
+    func launchOAuthFlow() {
+        let startVc = AuthenticationManager.shared.nextViewController()
+        guard let nextVC = startVc else {
+            // TODO: refactor this redundancy
+            window?.rootViewController = RootTabBarController.newInstance()
+            return
+        }
+        
+        let oAuthNavController = OAuthNavigationController.newInstance()
+        oAuthNavController.pushViewController(nextVC, animated: false)
+        self.window?.rootViewController = oAuthNavController
+    }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
@@ -86,7 +110,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
 
 }
 

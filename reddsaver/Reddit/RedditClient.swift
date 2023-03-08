@@ -38,12 +38,12 @@ class RedditClient {
                 // TODO: handle with success/fail and log in other method
                 return
             }
-            getSavedItemsAF(token: validToken, username: user)
+            getSavedItems(token: validToken, username: user)
 
         }
     }
     
-    private func getSavedItemsAF(token: String, username: String) {
+    private func getSavedItems(token: String, username: String) {
         let urlPath = "http://oauth.reddit.com/user/\(username)/saved.json"
         let tokenHeaders: HTTPHeaders = [.authorization(bearerToken: token)]
         
@@ -62,25 +62,26 @@ class RedditClient {
                 print("\(error)")
             }
         }
+    }
+    
+    // for debug only
+    private func getDebugItems(token: String, username: String) {
+        let urlPath = "http://oauth.reddit.com/user/\(username)/saved.json"
+        let tokenHeaders: HTTPHeaders = [.authorization(bearerToken: token)]
         
-        // debug code
-        /*
         AF.request(urlPath, headers: tokenHeaders).responseJSON { response in
             guard let datums = response.data else {
                 // TODO:
                 return
             }
-                let stringValue = String(decoding: datums, as: UTF8.self)
-                debugPrint(stringValue)
-                let nnn = stringValue
-
+            
+            let stringValue = String(decoding: datums, as: UTF8.self)
+            debugPrint(stringValue)
 
             let JSONObject = try? JSON(data: datums)
-            var ppp = 1
             print(JSONObject!)
 
         }
-         */
     }
 }
 

@@ -17,13 +17,14 @@
 		251B7A8F297735C0009FAD5C /* reddsaverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A8E297735C0009FAD5C /* reddsaverUITests.swift */; };
 		251B7A91297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251B7A90297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift */; };
 		2525904029774D7100B4947D /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2525903F29774D7100B4947D /* UserStorage.swift */; };
-		253E538629B857B300C15D4A /* TokenManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E538529B857B300C15D4A /* TokenManager.swift */; };
+		253E538629B857B300C15D4A /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E538529B857B300C15D4A /* AuthenticationManager.swift */; };
 		253E538929B8687700C15D4A /* ReddLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253E538829B8687700C15D4A /* ReddLogger.swift */; };
 		25451C0D29B7A3CF004FA121 /* RedditClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25451C0C29B7A3CF004FA121 /* RedditClient.swift */; };
+		256E602F29B8FE560098200E /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256E602E29B8FE560098200E /* LogInViewController.swift */; };
 		25773B7A299A3E5E0005BD2A /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25773B79299A3E5E0005BD2A /* String+Additions.swift */; };
 		257DFF9129B6B2F700093387 /* OAuth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 257DFF9029B6B2F700093387 /* OAuth.storyboard */; };
 		257DFF9429B6B85D00093387 /* View1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DFF9329B6B85D00093387 /* View1ViewController.swift */; };
-		257DFF9629B6C05D00093387 /* Nav1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DFF9529B6C05D00093387 /* Nav1Controller.swift */; };
+		257DFF9629B6C05D00093387 /* OAuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257DFF9529B6C05D00093387 /* OAuthNavigationController.swift */; };
 		2588E9A629B279C1007620CC /* OAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2588E9A529B279C1007620CC /* OAuthViewController.swift */; };
 		2588E9A829B28CD0007620CC /* URL+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2588E9A729B28CD0007620CC /* URL+Additions.swift */; };
 		2588E9AA29B28E32007620CC /* Collection+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2588E9A929B28E32007620CC /* Collection+Additions.swift */; };
@@ -32,6 +33,7 @@
 		25ED7750298B034200B78F10 /* OAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED774F298B034200B78F10 /* OAuthViewModel.swift */; };
 		25ED7752298B03D000B78F10 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25ED7751298B03D000B78F10 /* RootTabBarController.swift */; };
 		25ED7754298B04C000B78F10 /* Core.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25ED7753298B04C000B78F10 /* Core.storyboard */; };
+		695D9C8AE31CDA893D9E7AE3 /* Pods_reddsaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1DBD584A4A6CE4326D6378 /* Pods_reddsaver.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,14 +68,15 @@
 		251B7A8E297735C0009FAD5C /* reddsaverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reddsaverUITests.swift; sourceTree = "<group>"; };
 		251B7A90297735C0009FAD5C /* reddsaverUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reddsaverUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2525903F29774D7100B4947D /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
-		253E538529B857B300C15D4A /* TokenManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenManager.swift; sourceTree = "<group>"; };
+		253E538529B857B300C15D4A /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		253E538829B8687700C15D4A /* ReddLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReddLogger.swift; sourceTree = "<group>"; };
 		25451C0C29B7A3CF004FA121 /* RedditClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditClient.swift; sourceTree = "<group>"; };
+		256E602E29B8FE560098200E /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		25773B78299A3C650005BD2A /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		25773B79299A3E5E0005BD2A /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		257DFF9029B6B2F700093387 /* OAuth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OAuth.storyboard; sourceTree = "<group>"; };
 		257DFF9329B6B85D00093387 /* View1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1ViewController.swift; sourceTree = "<group>"; };
-		257DFF9529B6C05D00093387 /* Nav1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nav1Controller.swift; sourceTree = "<group>"; };
+		257DFF9529B6C05D00093387 /* OAuthNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthNavigationController.swift; sourceTree = "<group>"; };
 		2588E9A529B279C1007620CC /* OAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewController.swift; sourceTree = "<group>"; };
 		2588E9A729B28CD0007620CC /* URL+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Additions.swift"; sourceTree = "<group>"; };
 		2588E9A929B28E32007620CC /* Collection+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Additions.swift"; sourceTree = "<group>"; };
@@ -82,6 +85,9 @@
 		25ED774F298B034200B78F10 /* OAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthViewModel.swift; sourceTree = "<group>"; };
 		25ED7751298B03D000B78F10 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 		25ED7753298B04C000B78F10 /* Core.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Core.storyboard; sourceTree = "<group>"; };
+		6564888129566FDBF29D787A /* Pods-reddsaver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reddsaver.release.xcconfig"; path = "Target Support Files/Pods-reddsaver/Pods-reddsaver.release.xcconfig"; sourceTree = "<group>"; };
+		8C1DBD584A4A6CE4326D6378 /* Pods_reddsaver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reddsaver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAAA4D90B3BC3DBC221EFD25 /* Pods-reddsaver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reddsaver.debug.xcconfig"; path = "Target Support Files/Pods-reddsaver/Pods-reddsaver.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				695D9C8AE31CDA893D9E7AE3 /* Pods_reddsaver.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +123,8 @@
 				251B7A83297735C0009FAD5C /* reddsaverTests */,
 				251B7A8D297735C0009FAD5C /* reddsaverUITests */,
 				251B7A68297735BD009FAD5C /* Products */,
+				52F4C3DBE2116FEBAB602F77 /* Pods */,
+				5E267A09B7F58AD6536F6741 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,7 +206,7 @@
 				2588E9AB29B2A69E007620CC /* Model */,
 				257DFF8F29B6B26000093387 /* View */,
 				25ED774D298B031300B78F10 /* ViewModel */,
-				253E538529B857B300C15D4A /* TokenManager.swift */,
+				253E538529B857B300C15D4A /* AuthenticationManager.swift */,
 			);
 			path = OAuth;
 			sourceTree = "<group>";
@@ -205,8 +214,10 @@
 		257DFF8F29B6B26000093387 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2588E9A529B279C1007620CC /* OAuthViewController.swift */,
+				256E602E29B8FE560098200E /* LogInViewController.swift */,
 				257DFF9029B6B2F700093387 /* OAuth.storyboard */,
+				257DFF9529B6C05D00093387 /* OAuthNavigationController.swift */,
+				2588E9A529B279C1007620CC /* OAuthViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,7 +226,6 @@
 			isa = PBXGroup;
 			children = (
 				257DFF9329B6B85D00093387 /* View1ViewController.swift */,
-				257DFF9529B6C05D00093387 /* Nav1Controller.swift */,
 			);
 			path = Temp;
 			sourceTree = "<group>";
@@ -257,6 +267,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		52F4C3DBE2116FEBAB602F77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAAA4D90B3BC3DBC221EFD25 /* Pods-reddsaver.debug.xcconfig */,
+				6564888129566FDBF29D787A /* Pods-reddsaver.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5E267A09B7F58AD6536F6741 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C1DBD584A4A6CE4326D6378 /* Pods_reddsaver.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,9 +291,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 251B7A94297735C0009FAD5C /* Build configuration list for PBXNativeTarget "reddsaver" */;
 			buildPhases = (
+				033395D5B1748FDAB40CF006 /* [CP] Check Pods Manifest.lock */,
 				251B7A63297735BD009FAD5C /* Sources */,
 				251B7A64297735BD009FAD5C /* Frameworks */,
 				251B7A65297735BD009FAD5C /* Resources */,
+				C1F9DBC3BA6346D0ACEE194F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -385,6 +414,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		033395D5B1748FDAB40CF006 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-reddsaver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C1F9DBC3BA6346D0ACEE194F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reddsaver/Pods-reddsaver-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reddsaver/Pods-reddsaver-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reddsaver/Pods-reddsaver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		251B7A63297735BD009FAD5C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -392,6 +463,7 @@
 			files = (
 				25ED7752298B03D000B78F10 /* RootTabBarController.swift in Sources */,
 				257DFF9429B6B85D00093387 /* View1ViewController.swift in Sources */,
+				256E602F29B8FE560098200E /* LogInViewController.swift in Sources */,
 				25451C0D29B7A3CF004FA121 /* RedditClient.swift in Sources */,
 				25ED7747298B00C500B78F10 /* UIViewController+Additions.swift in Sources */,
 				251B7A6B297735BD009FAD5C /* AppDelegate.swift in Sources */,
@@ -399,8 +471,8 @@
 				251B7A75297735BD009FAD5C /* reddsaver.xcdatamodeld in Sources */,
 				2588E9A629B279C1007620CC /* OAuthViewController.swift in Sources */,
 				253E538929B8687700C15D4A /* ReddLogger.swift in Sources */,
-				257DFF9629B6C05D00093387 /* Nav1Controller.swift in Sources */,
-				253E538629B857B300C15D4A /* TokenManager.swift in Sources */,
+				257DFF9629B6C05D00093387 /* OAuthNavigationController.swift in Sources */,
+				253E538629B857B300C15D4A /* AuthenticationManager.swift in Sources */,
 				25ED7750298B034200B78F10 /* OAuthViewModel.swift in Sources */,
 				2588E9AD29B2A6AE007620CC /* OAuthModel.swift in Sources */,
 				2588E9AA29B28E32007620CC /* Collection+Additions.swift in Sources */,
@@ -580,6 +652,7 @@
 		};
 		251B7A95297735C0009FAD5C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAAA4D90B3BC3DBC221EFD25 /* Pods-reddsaver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -614,6 +687,7 @@
 		};
 		251B7A96297735C0009FAD5C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6564888129566FDBF29D787A /* Pods-reddsaver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

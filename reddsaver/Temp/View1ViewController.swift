@@ -30,18 +30,20 @@ class View1ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
-        guard TokenManager.shared.accessToken != nil else {
-            loadOAuth()
+ 
+        // TODO: reinstate
+        // RedditClient.shared.getPagedItems()
+            
+    }
+
+}
+
+// MARK: AuthenticationDelegate
+extension View1ViewController: AuthenticationDelegate {
+    func loadNextViewController(_ nextVC: UIViewController?) {
+        guard let loadingVC = nextVC else {
             return
         }
+        navigationController?.pushViewController(loadingVC, animated: true)
     }
-
-    func loadOAuth() {
-        let oauthVc = OAuthViewController.newInstance()
-        navigationController?.pushViewController(oauthVc, animated: true)
-//        oauthVc.modalPresentationStyle = .fullScreen
-//        present(oauthVc, animated: true, completion: nil)
-    }
-
 }

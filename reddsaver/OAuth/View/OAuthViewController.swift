@@ -33,7 +33,7 @@ class OAuthViewController: UIViewController {
         webView.navigationDelegate = self
 
         // TODO: move this conditional to root tab bar
-        guard TokenManager.shared.accessToken != nil else {
+        guard AuthenticationManager.shared.accessToken != nil else {
             getAuthCode()
             return
         }
@@ -121,7 +121,7 @@ extension OAuthViewController: WKNavigationDelegate {
             viewModel.getAccessToken(code) { status in
                 switch (status) {
                 case true:
-                    self.navigationController?.popToRootViewController(animated: true)
+                    AuthenticationManager.shared.navigateToNextViewController(self.navigationController)
                 case false:
                     self.handleError()
                 }

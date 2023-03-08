@@ -40,14 +40,17 @@ struct RedditResponse: Codable {
     
     struct Preview: Codable {
         var enabled: Bool?
-        var images: [Image]
+        var images: [Image]?
     }
     
     struct Image: Codable {
-        var resolutions: [Resolution]?
+        var id: String?
+        var resolutions: [ImageInfo]?
+        var source: ImageInfo?
+        // TODO: var variants[xxx]?
     }
     
-    struct Resolution: Codable {
+    struct ImageInfo: Codable {
         var height: Int?
         var url: String?
         var width: Int?

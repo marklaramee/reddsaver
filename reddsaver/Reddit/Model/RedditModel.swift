@@ -7,9 +7,10 @@
 
 import Foundation
 
-struct Reddit {
-    struct Root: Decodable {
-        var data: Reddit.Data
+// TODO: convert to decodable
+struct RedditResponse: Codable {
+    struct Root: Codable {
+        var data: Data
     }
     
     struct Data: Codable {

@@ -81,7 +81,7 @@ class OAuthViewModel {
             }
             
             do {
-                let redditResponse = try JSONDecoder().decode(RedditResponse.self, from: responseData)
+                let redditResponse = try JSONDecoder().decode(OAuthResponse.self, from: responseData)
                 // TODO: validate?
                 AuthenticationManager.shared.saveTokens(response: redditResponse)
                 DispatchQueue.main.async {

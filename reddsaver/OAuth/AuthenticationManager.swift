@@ -40,7 +40,7 @@ class AuthenticationManager {
         return
     }
     
-   func saveTokens(response: RedditResponse) {
+   func saveTokens(response: OAuthResponse) {
        // TODO: remove
         print("ML: acccess_token \(response.access_token)")
         print("ML: refresh_token \(response.refresh_token)")

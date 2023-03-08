@@ -47,40 +47,44 @@ class RedditClient {
         let urlPath = "http://oauth.reddit.com/user/\(username)/saved.json"
         let tokenHeaders: HTTPHeaders = [.authorization(bearerToken: token)]
         
-        AF.request(urlPath, headers: tokenHeaders).responseJSON { response in
-            guard let datums = response.data else {
+        AF.request(urlPath, headers: tokenHeaders).responseDecodable(of: RedditResponse.Root.self) { response in
+            switch response.result {
+            case .success:
+                do {
+                    let items = try response.result.get()
+                    debugPrint(items)
+                    let nnn = 1
+                } catch {
+                    // TODO: log it
+                    print("ml: fail")
+                }
+            case .failure(let error):
                 // TODO:
-                return
+                print("\(error)")
             }
-                let stringValue = String(decoding: datums, as: UTF8.self)
-                debugPrint(stringValue)
-                let nnn = stringValue
-            
-            
-            let JSONObject = try? JSON(data: datums)
-            var ppp = 1
-            print(JSONObject!)
-            ppp = 2
-            
-//            if let JSONObject = try? JSONSerialization.jsonObject(with: datums, options: .allowFragments) as? [[String: Any]] {
-//                var ppp = 1
-//                print(JSONObject)
-//                ppp = 2
-//
-//                    // There's our username
-//            }
-            
-            
-            
-//              let json = JSON(data: response.data!)
-//              let name = json["people"][0]["name"].string
-//              if name != nil {
-//                print(name!)
-//              }
-           // }
         }
+        
+        
+        
             
-
+        
+        
+//        AF.request(urlPath, headers: tokenHeaders).responseJSON { response in
+//            guard let datums = response.data else {
+//                // TODO:
+//                return
+//            }
+//                let stringValue = String(decoding: datums, as: UTF8.self)
+//                debugPrint(stringValue)
+//                let nnn = stringValue
+//
+//
+//            let JSONObject = try? JSON(data: datums)
+//            var ppp = 1
+//            print(JSONObject!)
+//            ppp = 2
+//
+//        }
     }
 }
 

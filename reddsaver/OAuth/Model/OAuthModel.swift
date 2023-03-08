@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RedditResponse: Codable {
+struct OAuthResponse: Codable {
     var expires_in: Int
     var token_type: String
     var access_token: String

@@ -132,14 +132,12 @@
 		251B7A69297735BD009FAD5C /* reddsaver */ = {
 			isa = PBXGroup;
 			children = (
-				253E538729B8685600C15D4A /* Utilities */,
 				25451C0929B7A39C004FA121 /* Client */,
 				257DFF9229B6B84300093387 /* Temp */,
 				251B7A9D29773C50009FAD5C /* Core */,
 				25ED7745298B009000B78F10 /* Extensions */,
 				257DFF8E29B6B23A00093387 /* OAuth */,
-				2525903E29774D5100B4947D /* User */,
-				251B7A70297735BD009FAD5C /* Main.storyboard */,
+				253E538729B8685600C15D4A /* Utilities */,
 				251B7A76297735BF009FAD5C /* Assets.xcassets */,
 				251B7A78297735BF009FAD5C /* LaunchScreen.storyboard */,
 				251B7A7B297735BF009FAD5C /* Info.plist */,
@@ -174,13 +172,6 @@
 				251B7A6C297735BD009FAD5C /* SceneDelegate.swift */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		2525903E29774D5100B4947D /* User */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		253E538729B8685600C15D4A /* Utilities */ = {
@@ -259,6 +250,7 @@
 		25ED774E298B032200B78F10 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				251B7A70297735BD009FAD5C /* Main.storyboard */,
 				25ED7751298B03D000B78F10 /* RootTabBarController.swift */,
 				25ED7753298B04C000B78F10 /* Core.storyboard */,
 			);

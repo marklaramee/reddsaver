@@ -108,7 +108,7 @@ extension OAuthViewController: WKNavigationDelegate {
             // ensure this is a response from this app  
             guard let validationState = url.getRawQueryStringValue("state"),
                   validationState == self.viewModel.validationString else {
-                ReddLogger.shared.log(level: .error, message: "App validation string failed.", category: .oAuth)
+                ReddLogger.shared.log(level: .error, message: "App validation string failed. This response was not verified as coming from this app.", category: .oAuth)
                 handleError()
                 return
             }

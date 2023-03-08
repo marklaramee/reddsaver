@@ -41,6 +41,7 @@ class LogInViewController: UIViewController {
                 // TODO: handle error
                 return
             }
+            AuthenticationManager.shared.navigateToNextViewController(navigationController)
         }
     }
 

@@ -73,4 +73,12 @@ class AuthenticationManager {
         }
         return nil
     }
+    
+    func navigateToNextViewController(_ navController: UINavigationController?) {
+        guard let nextVC = nextViewController() else {
+            SceneDelegate.shared?.window?.rootViewController = RootTabBarController.newInstance()
+            return
+        }
+        navController?.pushViewController(nextVC, animated: true)
+    }
 }

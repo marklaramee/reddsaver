@@ -9,8 +9,8 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    static var shared: SceneDelegate?
     var window: UIWindow?
-
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -31,39 +31,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             launchOAuthFlow()
         }
-        
-        
-        
-        /*
-         guard let winScene = (scene as? UIWindowScene) else { return }
-
-         // Create main app window with initial view controller
-         window = UIWindow(windowScene: winScene)
-
-         if OnboardingController.shared.isOnboardingComplete {
-             window?.rootViewController = RootTabBarController.newInstance()
-             window?.makeKeyAndVisible()
-         } else {
-             window?.rootViewController = getLaunchScreen()
-             window?.makeKeyAndVisible()
-
-             // wait for remote configs so we know which screen to load
-             DispatchQueue.main.async {
-                 let semaphore = DispatchSemaphore(value: 0)
-
-                 Configuration.shared.waitForRemoteConfigurations { _ in
-                     self.launchOnboarding()
-                     semaphore.signal()
-                 }
-
-                 let timeout = DispatchTime.now() + .seconds(self.remoteConfigurationTimeoutInSeconds)
-                 if semaphore.wait(timeout: timeout) == .timedOut {
-                     self.launchOnboarding()
-                     semaphore.signal()
-                 }
-             }
-         }
-         */
     }
     
     // TODO: make private?

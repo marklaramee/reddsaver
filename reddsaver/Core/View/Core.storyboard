@@ -93,7 +93,7 @@
         <!--Item 2-->
         <scene sceneID="M0f-I2-i8U">
             <objects>
-                <viewController storyboardIdentifier="View1ViewController" id="NVZ-6e-yxU" customClass="View1ViewController" customModule="reddsaver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RedditViewController" id="NVZ-6e-yxU" customClass="RedditViewController" customModule="reddsaver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ovy-cx-VOG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

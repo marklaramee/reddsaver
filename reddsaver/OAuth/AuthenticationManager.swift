@@ -8,10 +8,6 @@
 import Foundation
 import UIKit
 
-protocol AuthenticationDelegate {
-    func loadNextViewController(_ nextVC: UIViewController?)
-}
-
 class AuthenticationManager {
     
     static let shared = AuthenticationManager()

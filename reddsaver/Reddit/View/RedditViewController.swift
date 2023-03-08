@@ -1,5 +1,5 @@
 //
-//  View1ViewController.swift
+//  RedditViewController.swift
 //  reddsaver
 //
 //  Created by Mark Laramee on 3/6/23.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class View1ViewController: UIViewController {
+class RedditViewController: UIViewController {
     
     let oAuthViewModel = OAuthViewModel()
     
-    static func newInstance() -> View1ViewController {
-        let viewController = buildFromStoryboard("Core") as View1ViewController
+    static func newInstance() -> RedditViewController {
+        let viewController = buildFromStoryboard("Core") as RedditViewController
         return viewController
     }
 
@@ -36,14 +36,4 @@ class View1ViewController: UIViewController {
             
     }
 
-}
-
-// MARK: AuthenticationDelegate
-extension View1ViewController: AuthenticationDelegate {
-    func loadNextViewController(_ nextVC: UIViewController?) {
-        guard let loadingVC = nextVC else {
-            return
-        }
-        navigationController?.pushViewController(loadingVC, animated: true)
-    }
 }

@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import RxSwift
+import RxRelay
 
 class RedditViewController: UIViewController {
     
-    let oAuthViewModel = OAuthViewModel()
+    let viewModel = RedditViewModel(client: RedditClient.shared)
+    
+    private let disposeBag = DisposeBag()
     
     @IBOutlet weak var savedItemsTableView: UITableView!
     
@@ -30,6 +34,18 @@ class RedditViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.getPagedItems()
+        
+        viewModel.items.asObservable().subscribe(onNext: { [weak self] items in
+            guard let root = items else {
+                return
+            }
+                 
+            // TODO: populate table
+            
+        }).disposed(by: disposeBag)
+        
     }
     
     override func viewDidLayoutSubviews() {

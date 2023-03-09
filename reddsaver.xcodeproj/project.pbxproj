@@ -162,7 +162,6 @@
 		251B7A69297735BD009FAD5C /* reddsaver */ = {
 			isa = PBXGroup;
 			children = (
-				25451C0929B7A39C004FA121 /* Client */,
 				257DFF9229B6B84300093387 /* Reddit */,
 				251B7A9D29773C50009FAD5C /* Core */,
 				25ED7745298B009000B78F10 /* Extensions */,
@@ -213,13 +212,6 @@
 				253E538829B8687700C15D4A /* ReddLogger.swift */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		25451C0929B7A39C004FA121 /* Client */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Client;
 			sourceTree = "<group>";
 		};
 		256E603029B927B50098200E /* View */ = {

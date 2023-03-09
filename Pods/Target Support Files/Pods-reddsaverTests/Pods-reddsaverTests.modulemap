@@ -1,0 +1,6 @@
+framework module Pods_reddsaverTests {
+  umbrella header "Pods-reddsaverTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

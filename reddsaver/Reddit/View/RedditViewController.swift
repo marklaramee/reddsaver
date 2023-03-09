@@ -34,9 +34,7 @@ class RedditViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
- 
-        // TODO: reinstate
-        RedditClient.shared.getPagedItems()
+
             
     }
 
@@ -52,6 +50,7 @@ extension RedditViewController: UITableViewDataSource {
         return 1
     }
     
+    // let filterHuesTableViewCell = tableView.dequeueReusableCell(withIdentifier: "FilterHuesTableViewCell", for: indexPath) as?
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as? PostTableViewCell else {
             // TODO: logger

@@ -23,26 +23,8 @@ import SwiftyJSON
 
 class RedditClient {
     static let shared = RedditClient()
-
     
-    
-    
-    func getPagedItems() {
-        guard let user = AuthenticationManager.shared.username else {
-            // TODO: handle error
-            return
-        }
-        AuthenticationManager.shared.getCurrentAccessToken { token in
-            guard let validToken = token else {
-                ReddLogger.shared.log(level: .error, message: "No token available", category: .token)
-                // TODO: handle with success/fail and log in other method
-                return
-            }
-            getSavedItems(token: validToken, username: user)
-        }
-    }
-    
-    private func getSavedItems(token: String, username: String) {
+    func getSavedItems(token: String, username: String, completion: @escaping (RedditResponse.Root?) -> Void) {
         let urlPath = "http://oauth.reddit.com/user/\(username)/saved.json"
         let tokenHeaders: HTTPHeaders = [.authorization(bearerToken: token)]
         
@@ -52,19 +34,23 @@ class RedditClient {
                 do {
                     let items = try response.result.get()
                     debugPrint(items)
+                    completion(items)
+                    return
                 } catch {
                     // TODO: log it
                     print("ml: Failed to decode RedditResponse.Root")
+                    completion(nil)
                 }
             case .failure(let error):
                 // TODO:
                 print("\(error)")
+                completion(nil)
             }
         }
     }
     
-    // for debug only
-    private func getDebugItems(token: String, username: String) {
+    // for debug only TODO: delete?
+    func getDebugItems(token: String, username: String) {
         let urlPath = "http://oauth.reddit.com/user/\(username)/saved.json"
         let tokenHeaders: HTTPHeaders = [.authorization(bearerToken: token)]
         

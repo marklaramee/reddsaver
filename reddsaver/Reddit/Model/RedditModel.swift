@@ -61,12 +61,12 @@ struct RedditResponse: Codable {
     }
     
     enum Types: String {
-        case t1 = "Comment"
-        case t2 = "Account"
-        case t3 = "Link"
-        case t4 = "Message"
-        case t5 = "Subreddit"
-        case t6 = "Award"
+        case t1 // "Comment"
+        case t2 // "Account"
+        case t3 // "Link"
+        case t4 // "Message"
+        case t5 // "Subreddit"
+        case t6 // "Award"
     }
 }
 
